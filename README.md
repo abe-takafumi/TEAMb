@@ -21,5 +21,6 @@ function myFunction() {
   GmailApp.sendEmail(recipient,subject,body,options);
 
 test
+test
 
 }
