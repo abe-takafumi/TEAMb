@@ -1,22 +1,26 @@
 # TEAMb
 function myFunction() {
 
-  const recipient = 'abe-takafumi@webrage.jp'; 
-  const subject = 'Google Apps Scriptによるメール送信テスト';
+  function myFunction() {
+
+  abe = 'abe-takafumi@webrage.jp';
+  const recipient = abe ;
+  sub = 'Google Apps Scriptによるメール送信テスト';
+  const subject = sub ;
 
   const DOC_URL = 'https://docs.google.com/document/d/1ZY82GtQuSE3ANs7ztfwMy_bDkqxyDt2ErlyekTofMTY/edit'; 
   const doc = DocumentApp.openByUrl(DOC_URL);
-  console.log(doc.getBody().getText());
-
-  const recipientCompany = '株式会社ウェブレッジ';
-  const recipientName = '阿部タカフミ';
 
   let options ={
-    cc:"abe-takafumi@webrage.jp",
-    bcc:"abe-takafumi@webrage.jp"
+    cc:abe,
+    bcc:abe
   };
-  let body = doc.getBody().getText();
-  
+
+  scr = doc.getBody().getText();
+
+  let body = scr ;
   
   GmailApp.sendEmail(recipient, subject, body, options);
+}
+
 }
