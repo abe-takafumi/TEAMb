@@ -6,7 +6,7 @@ function myFunction() {
   
   const DOC_URL = 'https://docs.google.com/document/d/1ZY82GtQuSE3ANs7ztfwMy_bDkqxyDt2ErlyekTofMTY/edit'; 
   const doc = DocumentApp.openByUrl(DOC_URL);
-  scr = doc.getBody().getText();
+  scr = doc.getText();
 
   const recipient = des;
   const subject = sub ;
