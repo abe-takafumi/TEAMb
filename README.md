@@ -4,21 +4,22 @@
 
 
 function myFunction() {
-　const recipient = 'sekine-kaho@webrage.jp';   
-  const subject = 'Google Apps Scriptによるメール送信テスト';
+
+  sekine = 'sekine-kaho@webrage.jp';
+  const recipient = sekine ;
+  sub = 'google Apps Scriptによるメールテスト送信テスト'  
+  const subject = sub ;
 
   const DOC_URL = 'https://docs.google.com/document/d/1yA6uyqI2tI57x9jS1idua3JhZnZ649dS1n77e4MBkF8/edit'; 
   const doc = DocumentApp.openByUrl(DOC_URL);
-  console.log(doc.getName());
-  console.log(doc.getBody().getText());
-
-  const recipientCompany = '株式会社ウェブレッジ';
-  const recipientName = '関根花歩';
+  
 
 　let options ={
-    cc:"sekine-kaho@webrege.jp"
+    cc:sekine,
+    bcc:sekine
 };
 
-let body = doc.getBody().getText();
+scr = doc.getBody().getText();
+let body = scr ;
 GmailApp.sendEmail(recipient, subject, body, options);
 }
