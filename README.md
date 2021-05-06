@@ -2,11 +2,12 @@
 チームB
 
 
-
 function myFunction() {
 
-  sekine = 'sekine-kaho@webrage.jp';
+  let sekine = 'sekine-kaho@webrage.jp';
   const recipient = sekine ;
+
+
   sub = 'google Apps Scriptによるメールテスト送信テスト'  
   const subject = sub ;
 
@@ -19,7 +20,6 @@ function myFunction() {
     bcc:sekine
 };
 
-scr = doc.getBody().getText();
-let body = scr ;
-GmailApp.sendEmail(recipient, subject, body, options);
+scr = doc.getText();
+GmailApp.sendEmail(recipient, subject, options);
 }
