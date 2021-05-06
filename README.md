@@ -3,3 +3,4 @@
 aiueo
 asdfgghjk
 kakkoko
+sekinekaho
