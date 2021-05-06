@@ -1,7 +1,10 @@
 function myFunction() {
 　
-　yabuki = 'yabuki-tomohiko@webrage.jp';
-　const recipient = yabuki ; 
+　abe = 'abe-takafumi@webrage.jp';
+  othermember = 'sekine-kaho@webrage.jp,ishii-hiroto@webrage.jp';
+  yabuki = 'yabuki-tomohiko@webrage.jp';
+
+　const recipient = abe ; 
   sub = 'Google Apps Scriptによるメール送信テスト';
   const subject = sub ;
 
@@ -9,11 +12,11 @@ function myFunction() {
   const doc = DocumentApp.openByUrl(DOC_URL) ;
 
   let options = {
-    cc:yabuki,
+    cc:othermember,
     bcc:yabuki
   };
  
-  scr = doc.getBody().getText();
+  scr = doc.getText();
 
   let body = scr ;
 
