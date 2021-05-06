@@ -1,19 +1,25 @@
 # TEAMb
 チームB
 function myFunction() {
-  const recipient = 'yabuki-tomohiko@webrage.jp'; 
-  const subject = 'Google Apps Scriptによるメール送信テスト';
+
+  yabuki = 'yabuki-tomohiko@webrage.jp';
+
+  const recipient = yabuki ; 
+  sub = 'Google Apps Scriptによるメール送信テスト';
+  const subject = sub ;
+  
   const DOC_URL = 'https://docs.google.com/document/d/1CQEP5K_UaPA3b13U9bi0YJ2Xtyhqyobenk84ZYXv520/edit';
   const doc = DocumentApp.openByUrl(DOC_URL) ;
-  
-  const recipientCompany = '株式会社ウェブレッジ';
-  const recipientName = '矢吹知彦';
-  
+   
   let options = {
-    cc:"yabuki-tomohiko@webrage.jp",
-   bcc:"yabuki-tomohiko@webrage.jp"
+    cc:yabuki,
+    bcc:yabuki
   };
-  let body = doc.getBody().getText();
+
+  scr = doc.getbody().getText();
+
+  let body = scr ;
+  
   GmailApp.sendEmail(recipient,subject,body,options);
 
 }
