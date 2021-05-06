@@ -1,8 +1,6 @@
 # TEAMb
 function myFunction() {
 
-  function myFunction() {
-
   abe = 'abe-takafumi@webrage.jp';
   const recipient = abe ;
   sub = 'Google Apps Scriptによるメール送信テスト';
@@ -23,4 +21,4 @@ function myFunction() {
   GmailApp.sendEmail(recipient, subject, body, options);
 }
 
-}
+
