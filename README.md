@@ -19,4 +19,7 @@ function myFunction() {
   let body = doc.getText();
 
   GmailApp.sendEmail(recipient,subject,body,options);
+
+test
+
 }
